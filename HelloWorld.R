@@ -63,6 +63,7 @@ data[,1]<-c(1,2,3,4)
 data
 
 #创建数据帧，共享矩阵与列表的一些属性
+#可以在不影响原始数据的情况下改变数据
 ?data.frame
 wingcrd <- c(59,55,53.5,55,52.5,57.5,53.0,55)
 tarsus <- c(22.3,19.7,20.8,20.3,20.8,21.5,20.6,21.5)
@@ -70,4 +71,32 @@ head <- c(31.2,30.4,30.6,30.3,30.3,30.8,32.5,NA)
 wt <- c(9.5,13.8,14.8,15.2,15.5,15.6,15.6,15.7)
 dfrm <- data.frame(WC=wingcrd,TS=tarsus,HD=head,w=wt)
 dfrm
+
+#删除对象
+?rm
+dfrm$WC
+
+?list
+x <-list()
+x
+
+x <-list(c(1,2,3))
+x
+x <- list(c=c(1,2,3),d=c(4,5,6),e=c(7,8,9))
+x
+x$c
+
+pts <- list(x = cars[,1], y = cars[,2])
+plot(pts)
+
+#median() 中位数
+?median
+median(1:4)
+
+#max() 计算最大值
+?max
+
+#max() 计算最小值
+?min
+
 
